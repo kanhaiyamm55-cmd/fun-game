@@ -3,103 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch the Emoji 🎯</title>
-
+    <meta name="theme-color" content="#080b18">
+    <title>Neon Dodge</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <main class="game-container">
+<div class="app">
 
-        <header class="game-header">
+    <!-- TOP BAR -->
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">✦</span>
             <div>
-                <p class="mini-title">FUN GAME</p>
-                <h1>Catch the Emoji 🎯</h1>
+                <h1>NEON DODGE</h1>
+                <span>ARCADE MODE</span>
             </div>
+        </div>
 
-            <button id="soundBtn" class="icon-btn" title="Sound">
-                🔊
-            </button>
-        </header>
+        <button class="sound-btn" id="soundBtn">🔊</button>
+    </header>
 
-        <section class="stats">
 
-            <div class="stat-card">
-                <span>🏆</span>
-                <div>
-                    <small>Score</small>
-                    <strong id="score">0</strong>
+    <!-- GAME STATS -->
+    <section class="stats">
+
+        <div class="stat">
+            <span class="stat-icon">🏆</span>
+            <div>
+                <small>SCORE</small>
+                <strong id="score">0000</strong>
+            </div>
+        </div>
+
+        <div class="stat">
+            <span class="stat-icon">❤️</span>
+            <div>
+                <small>LIVES</small>
+                <strong id="lives">3</strong>
+            </div>
+        </div>
+
+        <div class="stat">
+            <span class="stat-icon">⚡</span>
+            <div>
+                <small>LEVEL</small>
+                <strong id="level">1</strong>
+            </div>
+        </div>
+
+        <div class="stat">
+            <span class="stat-icon">👑</span>
+            <div>
+                <small>BEST</small>
+                <strong id="best">0000</strong>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- GAME -->
+    <main class="game-wrapper">
+
+        <div class="game" id="game">
+
+            <div class="stars"></div>
+
+            <div class="grid"></div>
+
+            <!-- START SCREEN -->
+            <div class="screen" id="startScreen">
+
+                <div class="logo">
+                    <div class="logo-ring">✦</div>
                 </div>
-            </div>
 
-            <div class="stat-card">
-                <span>⏱️</span>
-                <div>
-                    <small>Time</small>
-                    <strong><span id="time">30</span>s</strong>
-                </div>
-            </div>
+                <p class="eyebrow">WELCOME TO THE ARCADE</p>
 
-            <div class="stat-card">
-                <span>🔥</span>
-                <div>
-                    <small>Best</small>
-                    <strong id="best">0</strong>
-                </div>
-            </div>
+                <h2>NEON<br><span>DODGE</span></h2>
 
-        </section>
-
-        <section class="game-area" id="gameArea">
-
-            <div class="start-message" id="startMessage">
-                <div class="big-emoji">🎯</div>
-
-                <h2>Ready?</h2>
-
-                <p>
-                    Click the emoji as fast as you can!
+                <p class="description">
+                    Dodge the falling obstacles.<br>
+                    Survive as long as you can.
                 </p>
 
-                <button id="startBtn" class="start-btn">
-                    Start Game 🚀
+                <button class="primary-btn" id="startBtn">
+                    PLAY NOW
+                    <span>→</span>
                 </button>
-            </div>
 
-            <button id="target" class="target">
-                😎
-            </button>
-
-            <div class="game-over" id="gameOver">
-
-                <div class="result-emoji">🎉</div>
-
-                <h2>Time's Up!</h2>
-
-                <p>Your Score</p>
-
-                <div class="final-score" id="finalScore">
-                    0
+                <div class="controls-info">
+                    <span>← →</span>
+                    <span>or</span>
+                    <span>A D</span>
+                    <small>MOVE</small>
                 </div>
 
-                <p id="resultMessage">
-                    Great job!
-                </p>
+            </div>
 
-                <button id="restartBtn" class="start-btn">
-                    Play Again 🔄
+
+            <!-- GAME OVER -->
+            <div class="screen hidden" id="gameOverScreen">
+
+                <div class="game-over-icon">💥</div>
+
+                <p class="eyebrow">GAME OVER</p>
+
+                <h2>MISSION<br><span>FAILED</span></h2>
+
+                <div class="result">
+                    <div>
+                        <small>SCORE</small>
+                        <strong id="finalScore">0000</strong>
+                    </div>
+
+                    <div>
+                        <small>BEST</small>
+                        <strong id="finalBest">0000</strong>
+                    </div>
+                </div>
+
+                <p id="resultMessage">Nice try, pilot.</p>
+
+                <button class="primary-btn" id="restartBtn">
+                    PLAY AGAIN
+                    <span>↻</span>
                 </button>
 
             </div>
 
-        </section>
 
-        <footer>
-            <p>Made with ❤️ for fun</p>
-        </footer>
+            <!-- PLAYER -->
+            <div class="player" id="player">
+                <div class="ship-glow"></div>
+                <div class="ship">▲</div>
+            </div>
+
+            <!-- PAUSE -->
+            <button class="pause-btn" id="pauseBtn">Ⅱ</button>
+
+        </div>
+
+
+        <!-- MOBILE CONTROLS -->
+        <div class="mobile-controls">
+
+            <button id="leftBtn">←</button>
+
+            <button id="rightBtn">→</button>
+
+        </div>
 
     </main>
 
-    <script src="script.js"></script>
+
+    <footer>
+        <span>NEON DODGE</span>
+        <span>•</span>
+        <span>Made for fun ✦</span>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
