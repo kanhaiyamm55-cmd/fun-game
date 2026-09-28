@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Emoji 🎯</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <div>
+                <p class="mini-title">FUN GAME</p>
+                <h1>Catch the Emoji 🎯</h1>
+            </div>
+
+            <button id="soundBtn" class="icon-btn" title="Sound">
+                🔊
+            </button>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>🏆</span>
+                <div>
+                    <small>Score</small>
+                    <strong id="score">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>⏱️</span>
+                <div>
+                    <small>Time</small>
+                    <strong><span id="time">30</span>s</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>🔥</span>
+                <div>
+                    <small>Best</small>
+                    <strong id="best">0</strong>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="game-area" id="gameArea">
+
+            <div class="start-message" id="startMessage">
+                <div class="big-emoji">🎯</div>
+
+                <h2>Ready?</h2>
+
+                <p>
+                    Click the emoji as fast as you can!
+                </p>
+
+                <button id="startBtn" class="start-btn">
+                    Start Game 🚀
+                </button>
+            </div>
+
+            <button id="target" class="target">
+                😎
+            </button>
+
+            <div class="game-over" id="gameOver">
+
+                <div class="result-emoji">🎉</div>
+
+                <h2>Time's Up!</h2>
+
+                <p>Your Score</p>
+
+                <div class="final-score" id="finalScore">
+                    0
+                </div>
+
+                <p id="resultMessage">
+                    Great job!
+                </p>
+
+                <button id="restartBtn" class="start-btn">
+                    Play Again 🔄
+                </button>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for fun</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
